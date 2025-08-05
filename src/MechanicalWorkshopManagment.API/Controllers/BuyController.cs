@@ -13,7 +13,7 @@ namespace MechanicalWorkshopManagment.API.Controllers
     public class BuyController : ControllerBase
     {
         /// <summary>
-        /// Registrar a compra de peças, com o id do cliente.
+        /// Registrar a compra de peças, com o id do clientes.
         /// </summary>
         /// <param name="useCase">DI para regra de negócio</param>
         /// <param name="createBuy">Dados via request</param>
