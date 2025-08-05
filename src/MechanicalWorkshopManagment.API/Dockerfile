@@ -1,21 +1,23 @@
-# Etapa 1 - Build
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+ROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /app
 
+# Copiar o arquivo da solução
 COPY *.sln ./
-COPY ./MechanicalWorkshopManagment.API/*.csproj ./MechanicalWorkshopManagment.API/
-COPY ./MechanicalWorkshopManagment.Application/*.csproj ./MechanicalWorkshopManagment.Application/
-COPY ./MechanicalWorkshopManagment.Domain/*.csproj ./MechanicalWorkshopManagment.Domain/
-COPY ./MechanicalWorkshopManagment.Infrastructure/*.csproj ./MechanicalWorkshopManagment.Infrastructure/
 
-RUN dotnet restore
+# Copiar só os arquivos .csproj mantendo a estrutura src/ (exatamente igual ao do projeto)
+COPY src/ src/
 
-COPY . .
-WORKDIR /app/MechanicalWorkshopManagment.API
+# Restaura os pacotes, dotnet irá procurar os projetos no caminho correto
+RUN dotnet restore MechanicalWorkshopManagment.sln
+
+# Copiar todo o restante do código (src + outros arquivos se existirem)
+COPY src/ src/
+
+WORKDIR /app/src/MechanicalWorkshopManagment.API
 RUN dotnet publish -c Release -o out
 
-# Etapa 2 - Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
 WORKDIR /app
-COPY --from=build /app/MechanicalWorkshopManagment.API/out ./
+COPY --from=build /app/src/MechanicalWorkshopManagment.API/out ./
+
 ENTRYPOINT ["dotnet", "MechanicalWorkshopManagment.API.dll"]
