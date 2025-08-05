@@ -1,17 +1,14 @@
-ROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /app
 
-# Copiar o arquivo da solução
 COPY *.sln ./
-
-# Copiar só os arquivos .csproj mantendo a estrutura src/ (exatamente igual ao do projeto)
 COPY src/ src/
+COPY tests/ tests/
 
-# Restaura os pacotes, dotnet irá procurar os projetos no caminho correto
 RUN dotnet restore MechanicalWorkshopManagment.sln
 
-# Copiar todo o restante do código (src + outros arquivos se existirem)
 COPY src/ src/
+COPY tests/ tests/
 
 WORKDIR /app/src/MechanicalWorkshopManagment.API
 RUN dotnet publish -c Release -o out
