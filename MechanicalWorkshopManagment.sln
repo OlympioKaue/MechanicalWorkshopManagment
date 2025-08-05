@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7E86E47D-0547-4C3B-8782-7311382DDC6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MechanicalWorkshopManagment.API", "src\MechanicalWorkshopManagment.API\MechanicalWorkshopManagment.API.csproj", "{AA521E3C-9481-44B0-9242-6C8F03949DAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MechanicalWorkshopManagment.Application", "src\MechanicalWorkshopManagment.Application\MechanicalWorkshopManagment.Application.csproj", "{83780B91-3D9C-4EC2-BF9D-3FE852120ED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MechanicalWorkshopManagment.Communication", "src\MechanicalWorkshopManagment.Communication\MechanicalWorkshopManagment.Communication.csproj", "{1ADFBF81-01F8-4A0C-920A-BAD5642F6EE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MechanicalWorkshopManagment.Domain", "src\MechanicalWorkshopManagment.Domain\MechanicalWorkshopManagment.Domain.csproj", "{DE11E00C-65F1-4D0C-93B6-E167BA42767C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MechanicalWorkshopManagment.Exception", "src\MechanicalWorkshopManagment.Exception\MechanicalWorkshopManagment.Exception.csproj", "{6482D70D-E4EC-40B1-97ED-69AE97270E4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MechanicalWorkshopManagment.Infrastructure", "src\MechanicalWorkshopManagment.Infrastructure\MechanicalWorkshopManagment.Infrastructure.csproj", "{88A5DEF4-A598-4050-A9B1-9E657070CF6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "tests\UnitTests\UnitTests.csproj", "{1848EBB0-8B4D-456D-A35D-F8417E1B82B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWorkshopProject", "tests\TestWorkshopProject\TestWorkshopProject.csproj", "{5EDECB35-FBAE-40A6-9601-EB14A37A58EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA521E3C-9481-44B0-9242-6C8F03949DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA521E3C-9481-44B0-9242-6C8F03949DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA521E3C-9481-44B0-9242-6C8F03949DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA521E3C-9481-44B0-9242-6C8F03949DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83780B91-3D9C-4EC2-BF9D-3FE852120ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83780B91-3D9C-4EC2-BF9D-3FE852120ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83780B91-3D9C-4EC2-BF9D-3FE852120ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83780B91-3D9C-4EC2-BF9D-3FE852120ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ADFBF81-01F8-4A0C-920A-BAD5642F6EE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ADFBF81-01F8-4A0C-920A-BAD5642F6EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ADFBF81-01F8-4A0C-920A-BAD5642F6EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ADFBF81-01F8-4A0C-920A-BAD5642F6EE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE11E00C-65F1-4D0C-93B6-E167BA42767C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE11E00C-65F1-4D0C-93B6-E167BA42767C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE11E00C-65F1-4D0C-93B6-E167BA42767C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE11E00C-65F1-4D0C-93B6-E167BA42767C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6482D70D-E4EC-40B1-97ED-69AE97270E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6482D70D-E4EC-40B1-97ED-69AE97270E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6482D70D-E4EC-40B1-97ED-69AE97270E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6482D70D-E4EC-40B1-97ED-69AE97270E4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88A5DEF4-A598-4050-A9B1-9E657070CF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88A5DEF4-A598-4050-A9B1-9E657070CF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88A5DEF4-A598-4050-A9B1-9E657070CF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88A5DEF4-A598-4050-A9B1-9E657070CF6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1848EBB0-8B4D-456D-A35D-F8417E1B82B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1848EBB0-8B4D-456D-A35D-F8417E1B82B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1848EBB0-8B4D-456D-A35D-F8417E1B82B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1848EBB0-8B4D-456D-A35D-F8417E1B82B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EDECB35-FBAE-40A6-9601-EB14A37A58EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EDECB35-FBAE-40A6-9601-EB14A37A58EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EDECB35-FBAE-40A6-9601-EB14A37A58EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EDECB35-FBAE-40A6-9601-EB14A37A58EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AA521E3C-9481-44B0-9242-6C8F03949DAF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{83780B91-3D9C-4EC2-BF9D-3FE852120ED9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{1ADFBF81-01F8-4A0C-920A-BAD5642F6EE7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{DE11E00C-65F1-4D0C-93B6-E167BA42767C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{6482D70D-E4EC-40B1-97ED-69AE97270E4B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{88A5DEF4-A598-4050-A9B1-9E657070CF6D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{1848EBB0-8B4D-456D-A35D-F8417E1B82B2} = {7E86E47D-0547-4C3B-8782-7311382DDC6D}
+		{5EDECB35-FBAE-40A6-9601-EB14A37A58EF} = {7E86E47D-0547-4C3B-8782-7311382DDC6D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31C75F23-CDFA-4578-8A74-0E61DDEC3D2F}
+	EndGlobalSection
+EndGlobal
