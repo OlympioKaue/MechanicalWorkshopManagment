@@ -62,7 +62,7 @@ namespace MechanicalWorkshopManagment.Application.UseCase.BuyUseCase.Register
             var currentDate = DateTime.UtcNow;
 
 
-            //Filtre apenas o orçamentoPeça marcado como espera (1 = Em espera).
+            //Filtre apenas o orçamentoPeça marcado como espera.
             var partsBudgetItens = partsBudgetCustomerExist!.PartsBudget.Where(pb =>
                     pb.BudgetStatus != PartsBudgetStatus.Finished).ToList();
 
@@ -135,8 +135,8 @@ namespace MechanicalWorkshopManagment.Application.UseCase.BuyUseCase.Register
                     AmountReceivable = createBuy.CostPrice > ExpectedTotal // Troco.
                     ? createBuy.CostPrice - ExpectedTotal : null,
                     Date = currentDate, // data da compra.
-                    PurchaseStatus = PurchaseStatus.Finished, // compra finalizada (enum = 3).
-                    StatusDelivered = DeliveredStatus.InWaiting, // entrega em espera (enum = 1).
+                    PurchaseStatus = PurchaseStatus.Finished, // compra finalizada.
+                    StatusDelivered = DeliveredStatus.InWaiting, // entrega em espera.
 
                 };
 
