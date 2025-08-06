@@ -6,6 +6,7 @@ using MechanicalWorkshopManagment.Domain.Repositories;
 using MechanicalWorkshopManagment.Infrastructure.DependencyExtension;
 using MechanicalWorkshopManagment.Infrastructure.ExtensionRepositories;
 using Microsoft.EntityFrameworkCore;
+using System.Net.Security;
 using System.Runtime.CompilerServices;
 using System.Text.Json.Serialization;
 
@@ -35,6 +36,7 @@ builder.Services.AddControllers().AddJsonOptions(option =>
     option.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); 
 });
 
+
 //Reconheça o assembly (ExceptionGerenicFilter), classe de filtrar os erros.
 builder.Services.AddMvc(add => add.Filters.Add(typeof(ExcetionGenericFilter)));
 TypeAdapterConfig.GlobalSettings.Scan(typeof(Program).Assembly);
@@ -49,7 +51,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
