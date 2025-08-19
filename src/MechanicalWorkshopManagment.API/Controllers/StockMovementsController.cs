@@ -13,9 +13,9 @@ namespace MechanicalWorkshopManagment.API.Controllers
         /// <summary>
         /// Retorne uma lista de movimentação no estoque (Entradas).
         /// </summary>
-        /// <param name="date">Via Request (DateOnly)</param>
+        /// <param name="date"> Parâmetro via request (dateOnly)</param>
         /// <param name="useCase">DI para regra de negócio</param>
-        /// <returns></returns>
+        /// <returns>Retorne o arquivo em excel</returns>
         [HttpGet("GetStockExcel")]
         [ProducesResponseType(typeof(GenericResponseErro), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetStockExcel
@@ -24,11 +24,9 @@ namespace MechanicalWorkshopManagment.API.Controllers
         {
             byte[] fileResult = await useCase.GetStockExcelExecute(date);
 
-            if (fileResult.Length > 0)
-                return File(fileResult, MediaTypeNames.Application.Octet, "report.xlsx");
+            return File(fileResult, MediaTypeNames.Application.Octet, "report.xlsx");
 
 
-            return NoContent();
         }
 
     }
