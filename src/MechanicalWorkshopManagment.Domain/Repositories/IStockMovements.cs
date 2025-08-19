@@ -15,5 +15,12 @@ namespace MechanicalWorkshopManagment.Domain.Repositories
         /// <param name="addStockMovement"></param>
         /// <returns></returns>
         Task AddStockMovementAsync(StockMovement addStockMovement);
+
+        /// <summary>
+        /// Retorne a lista da movimentação no estoque de acordo com o mês e ano.
+        /// </summary>
+        /// <param name="dateMonth"></param>
+        /// <returns></returns>
+        Task<List<StockMovement>> GetByStockMovements(DateTime dateMonth, DateTime dateYear);
     }
 }

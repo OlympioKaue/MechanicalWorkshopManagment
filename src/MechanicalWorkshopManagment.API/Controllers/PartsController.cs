@@ -3,10 +3,12 @@ using MechanicalWorkshopManagment.Application.UseCase.PartsUseCase.GetAll;
 using MechanicalWorkshopManagment.Application.UseCase.PartsUseCase.GetSelected;
 using MechanicalWorkshopManagment.Application.UseCase.PartsUseCase.Register;
 using MechanicalWorkshopManagment.Application.UseCase.PartsUseCase.Update;
+using MechanicalWorkshopManagment.Application.UseCase.StockMovementsUseCase.ReportsExcel;
 using MechanicalWorkshopManagment.Communication.Requests.RequestParts;
 using MechanicalWorkshopManagment.Communication.Responses.ResponseErro;
 using MechanicalWorkshopManagment.Communication.Responses.ResponseParts;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Mime;
 
 namespace MechanicalWorkshopManagment.API.Controllers
 {
@@ -66,6 +68,7 @@ namespace MechanicalWorkshopManagment.API.Controllers
 
 
 
+
         /// <summary>
         /// Atualizar uma peça específica pelo ID.
         /// </summary>
@@ -99,5 +102,8 @@ namespace MechanicalWorkshopManagment.API.Controllers
             return NoContent(); // RETORNE UM 204 NOCONTENT.
 
         }
+
+
+        
     }
 }
