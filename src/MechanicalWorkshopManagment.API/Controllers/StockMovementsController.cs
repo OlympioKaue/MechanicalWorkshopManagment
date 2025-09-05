@@ -29,5 +29,11 @@ namespace MechanicalWorkshopManagment.API.Controllers
 
         }
 
+        [HttpGet("GetStockPDF")]
+        public async Task<IActionResult> GetStockPDF(DateOnly date)
+        {
+            return Ok();
+        }
+
     }
 }
